@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share</title>
+    <style>
+        body {
+        background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+        padding: 0;
+        margin: 0;
+        overflow-y:hidden;
+
+    }
+
+    .FRIENDS {
+        width: 99%;
+        height: 400px;
+        border: 1px solid;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        box-shadow: 10px 10px 10px;
+        font-style: Italic;
+        font-size: 30px;
+        flex-direction: column;
+    }
+    .btn {
+        display: flex;
+        flex-direction: column;
+        border-radius:20px;
+        width: 35%;
+        background: none;
+        border: 1px solid;
+        box-shadow: 2px 2px 2px 2px;
+        font-style: Italic;
+        font-size: 20px;
+        color:white;
+        background-color:black;
+    }
+    h4{
+        margin-top:10px;
+    }
+    h2{
+        color:#011028;
+    }
+    </style>
+    <link rel="shortcut icon" href="swag.png" type="image/png">
+</head>
+<body>
+    <div class="FRIENDS">
+        <div class="TEXT">Questionnaire Made!</div><br>
+        <div id="btn" class="btn"><h4>Share this link for your friends to attend the quiz👇🏻:</h4></div>
+    </div>
+    <script>
+        let element= document.getElementById('btn')
+        let url= new URLSearchParams(window.location.search)
+        let code= url.get("code")
+        element.innerHTML+="<h3 style='color:#8ab4f8'>"+location.protocol+"//"+location.host+"/quiz.html?code="+code+"</h3>";
+
+    </script>
+</body>
+</html>

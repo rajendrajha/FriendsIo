@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="shortcut icon" href="swag.png" type="image/png">
+
+    <style>
+    @import url('font.css');
+
+    body {
+        background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 0;
+        margin: 0;
+        overflow-y:hidden;
+    }
+
+    .questions {
+        width: 99%;
+        min-height: 100px;
+        border: 1px solid;
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+
+    .mcq {
+        width: 90%;
+        min-height: 400px;
+        border: 1px solid;
+        box-shadow: 1px 1px 1px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .question {
+        width: 90%;
+        min-height: 50px;
+        border: 1px solid;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inconsolata', monospace;
+        letter-spacing: 1px;
+        font-size: 30px;
+    }
+
+    .options {
+        width: 90%;
+        min-height: 250px;
+        border: 1px solid;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inconsolata', monospace;
+        letter-spacing: 1px;
+        font-size: 30px;
+    }
+
+    .answer {
+        width: 90%;
+        min-height: 70px;
+        border: 1px solid;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 20px;
+        font-family: 'Inconsolata', monospace;
+        letter-spacing: 1px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        width: 90%;
+        min-height: 70px;
+        border: 1px solid;
+        margin-top: 5px;
+        margin-left: 5px;
+        background-color:#8AB4F8;
+        border-radius: 20px;
+        font-family: 'Inconsolata', monospace;
+        letter-spacing: 1px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    h1 {
+        font-size: 20px;
+        font-family: 'Inconsolata', monospace;
+    }
+
+    li {
+        list-style: none;
+    }
+    input {
+        width:20%;
+        height:30px;
+        border:none;
+        border:1px solid;
+        border-radius:20px;
+        font-style: 'Inconsolata', monospace;
+        font-size:30px;
+    }
+    input:focus{
+        outline:none;
+    }
+    button{
+        border:none;
+        background:none;
+        font-style: 'Inconsolata', monospace;
+        font-size:30px;
+        cursor:pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Enter Your Choises</h1>
+    <div class="questions">
+        <div class="mcq">
+            <div class="question">
+                <b>Question 1: Is he your friend?</b>
+            </div>
+            <div class="options">
+                <ul>
+                    <li>
+                        <b>
+                            a. Yes
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. No
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. Best Friend
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. Biggest Enemy
+                        </b>
+                    </li>
+                </ul>
+            </div>
+            <div class="answer">
+                <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <br>
+        
+        <div class="mcq">
+            <div class="question">
+            <b>Question 2: Which colour he likes the most?</b>
+            </div>
+            <div class="options">
+            <ul>
+                    <li>
+                        <b>
+                            a. Green 
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. Pink
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. Red
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. Others
+                        </b>
+                    </li>
+                </ul>
+            </div>
+            <div class="answer">
+            <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <br>
+        <div class="mcq">
+            <div class="question">
+            <b>Question 3: What he likes the most?</b>
+            </div>
+            <div class="options">
+            <ul>
+                <li>
+                        <b>
+                            a. Books
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. Games
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. Money
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. Others
+                        </b>
+                    </li>
+                </ul>
+            </div>
+            <div class="answer">
+                <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <br>
+        <div class="mcq">
+            <div class="question">
+            <b>Question 4: What he likes to do?</b>
+            </div>
+            <div class="options">
+            <ul>
+                    <li>
+                        <b>
+                            a. Eating
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. Exercise and Gaming
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. Studing
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. Others
+                        </b>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="answer">
+                <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <br>
+        <div class="mcq">
+            <div class="question">
+                <b>Question 5: Which cricket player he likes the most?</b>
+            </div>
+            <div class="options">
+            <ul>
+                    <li>
+                        <b>
+                            a. MS Dhoni
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. Sachin Tendulkar
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. Virat Kohli
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. Others
+                        </b>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="answer">
+                <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <br>
+        <div class="mcq">
+            <div class="question">
+            <b>Question 6: What he does in free time?</b>
+            </div>
+            <div class="options">
+                <ul>
+                        <li>
+                            <b>
+                                a. Deleting Old Emails 
+                            </b>
+                        </li>
+                        <li>
+                            <b>
+                                b. Test Old Pens and Throw Away Dry Ones
+                            </b>
+                        </li>
+                        <li>
+                            <b>
+                                c. Pen Spinning
+                            </b>
+                        </li>
+                        <li>
+                            <b>
+                                d. Other activities
+                            </b>
+                        </li>
+                    </ul>
+    
+                </div>
+                <div class="answer">
+                    <b> Your Answer: </b><input maxlength=1  type='text'>
+                </div>
+        </div>
+        <br>
+        <div class="mcq">
+            <div class="question">
+            <b>Question 7: When he wakes up in the morning?</b>
+            </div>
+            <div class="options">
+                <ul>
+                    <li>
+                        <b>
+                            a. 4am to 6am
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. 6am to 8am
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. 8am to 12pm
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. 12pm-11:59pm
+                        </b>
+                    </li>
+                </ul>
+ 
+            </div>
+            <div class="answer">
+                <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <br>
+        <div class="mcq">
+            <div class="question">
+            <b>Question 8: When he sleeps at night?</b>
+            </div>
+            <div class="options">
+            <ul>
+                    <li>
+                        <b>
+                            a. 6pm or before
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. 6pm to 9pm
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. 9pm to 12am
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. 12am to 12pm
+                        </b>
+                    </li>
+                </ul>
+ 
+            </div>
+            <div class="answer">
+                <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <br>
+        <div class="mcq">
+            <div class="question">
+                <b>Question 9: How much times you met him?</b>
+                </div>
+                <div class="options">
+                <ul>
+                    <li>
+                        <b>
+                            a. 1 time
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. 2 times
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. 3 times
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. more than 3 times
+                        </b>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="answer">
+                <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <br>
+        <div class="mcq">
+            <div class="question">
+            <b>Question 10: How many friends he is having?</b>
+            </div>
+            <div class="options">
+            <ul>
+                    <li>
+                        <b>
+                            a. 1 friend
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            b. 2 friends
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            c. 3 friends
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            d. more than 3 friends
+                        </b>
+                    </li>
+                </ul>
+            </div>
+            <div class="answer">
+                <b> Your Answer: </b><input maxlength=1  type='text'>
+            </div>
+        </div>
+        <div class="btn">
+            <button onclick="act()" type="submit">Submit</button>
+        </div>
+    </div>
+    <script>
+        function scroll_down(){
+            window.scrollBy(0, 425)
+        }
+        window.addEventListener('load', ()=>{
+            window.scrollTo(0,0)
+        })
+        let el= [document.getElementsByTagName('input')]
+        let score= 0;
+        let code2=[];
+        el.forEach(e=> {
+            for(i=0; i<e.length; i++){
+                e[i].addEventListener('keypress', (r)=>{
+                    if(r.key=='a' || r.key=='b' || r.key=='c' || r.key=='d'){
+                        code2.push(r.key)
+                        r.path[0].value=r.key;
+                        r.path[0].disabled=true;
+                        scroll_down()
+                    }
+                    else{
+                        r.preventDefault()
+                    }
+                })
+            }
+        });
+        function act(){
+            code= code2.reverse()
+            coded= code2.join('');
+            let url= new URLSearchParams(document.location.search)
+            let codedd= url.get("code")
+            for(i=0; i<codedd.length; i++){
+                if(coded[i]==codedd[i]){
+                    score++;
+                }
+            }
+            window.location.href= "result.html?r="+score;
+        }
+        
+    </script>
+</body>
+
+</html>

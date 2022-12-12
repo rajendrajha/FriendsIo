@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <script src="anychart-core.min.js"></script>
+    <script src="anychart-pie.min.js"></script>
+    <link rel="shortcut icon" href="swag.png" type="image/png">
+
+</head>
+<body>
+    <div id="container" style="width: 100%; height: 500px;"></div>
+    <script>
+        anychart.onDocumentReady(function(){
+            var url= new URLSearchParams(window.location.search)
+
+            var data=[
+                {x: "Scored", value:url.get("r")},
+                {x: "Not Scored", value:10-url.get("r")}
+            ];
+            var chart = anychart.pie();
+
+            // set the chart title
+            chart.title("Result");
+
+            // add the data
+            chart.data(data);
+
+            // display the chart in the container
+            chart.container('container');
+            chart.draw();
+
+        })
+    </script>
+</body>
+</html>
