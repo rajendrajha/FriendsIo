@@ -497,7 +497,9 @@
         function act(){
             code= code.reverse()
             coded= code.join('');
-            window.location.href='act.html?code='+coded;
+            localStorage.setItem('code', coded)
+            let a = localStorage.getItem('code')
+            window.location.href='act.html?code='+a;
         }
         
     </script>
